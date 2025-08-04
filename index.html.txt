@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Protected Page</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-left: 10px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #error {
+      color: red;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <p>Enter the secret code to continue</p>
+
+  <input type="password" id="passcode" placeholder="Enter PassCode" />
+  <button onclick="checkCode()">Unlock</button>
+
+  <p id="error"></p>
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById("passcode").value.trim();
+      if (code === "0825") {
+        // Redirect to your actual birthday site
+        window.location.href = "https://janibasha147.github.io/panda-birthday-ui/";
+      } else {
+        document.getElementById("error").textContent = "❌ Incorrect code. Try again.";
+      }
+    }
+  </script>
+
+</body>
+</html>
